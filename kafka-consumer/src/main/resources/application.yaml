@@ -1,0 +1,18 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /consumer
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: ${BOOTSTRAP_SERVERS:localhost:9092}
+      client-id: kafka-consumer
+      group-id: auto-consumer-group
+#      properties:
+#        spring.json.trusted.packages: "*"
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+#    listener:
+#      ack-mode: manual
+kafka:
+  topic: ${TOPIC:KAFKA-SAMPLE-TOPIC}

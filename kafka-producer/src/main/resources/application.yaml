@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /producer
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: ${BOOTSTRAP_SERVERS:localhost:9092}
+      client-id: kafka-producer
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+kafka:
+  topic: ${TOPIC:KAFKA-SAMPLE-TOPIC}
